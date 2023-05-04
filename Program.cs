@@ -1,64 +1,80 @@
-﻿// Do while loop
-string password = "";
-do
+﻿using System;
+using System.Threading;
+using KESCHA.Classes;
+
+namespace KESCHA
 {
-    System.Console.WriteLine("Hello, I'm Kescha! To contionue the proccess please enter password");
-    password = Console.ReadLine();
-}
-while(password != "Umid@123");
-System.Console.WriteLine("Password entered successful :) ");
-Thread.Sleep(2000);
-
-int KeschaAge = 5;
-Console.Write("What is your name?  ");
-
-string name = Console.ReadLine();
-string greeting = $"Hello, {name}";
-Thread.Sleep(2000);
-Console.WriteLine(greeting);  
-Console.Write("What's your age?  ");
-string AgeString = Console.ReadLine();
-int Age = int.Parse(AgeString);
-Thread.Sleep(2000);
-string greeting2 = $"That's awesome, {name}. Nice to meet you.";
-Console.WriteLine(greeting2);
-Thread.Sleep(2000);
-Console.WriteLine("Do you want to compare your age with Kescha's age?");
-string Confirmation = Console.ReadLine();
-Thread.Sleep(2000);
-
-if (Confirmation.ToLower() == "yes")
-{
-    Console.WriteLine("Wait......");
-    Thread.Sleep(2000);
-    Console.WriteLine($"The result is: {Age - KeschaAge}");
-    if (Age > KeschaAge)
+    class Program
     {
-        Console.WriteLine("You are older than Kescha.");
-    }
-    else if (Age == KeschaAge)
-    {
-        Console.WriteLine("You are the same age as Kescha.");
-    }
-    else
-    {
-        Console.WriteLine("You are younger than Kescha.");
-    }
-    Thread.Sleep(2000);
-//Array    
-System.Console.WriteLine("Now let me tell you about my friends.");
-    Thread.Sleep(2000);
-string [] friendsName = {"Luna", "Iris", "Aurora"};
-int [] friendsAge = {4,6,5};
-string [] fiendsAddress = {"Sydney", "Arizona", "Bangkok"};
-System.Console.WriteLine($"One of my friend is {friendsName[0]}. He is from {fiendsAddress[0]} and he is {friendsAge [0]} years old");
-}
-else if (Confirmation.ToLower() == "no")
-{
-    System.Console.WriteLine("Okay, no problem");
-}
+        static void Main()
+        {
+            // Create instance of Security class and check password
+            Security security = new Security();
+            security.CheckPassword();
 
-else
-{
-    Console.WriteLine("Wrong confirmation entered! ");
+            // Greet user and ask for their name
+            Console.Write("What is your name?  ");
+            string name = Console.ReadLine();
+            string greeting = $"Hello, {name}";
+            Thread.Sleep(2000);
+            Console.WriteLine(greeting);
+
+            // Ask for user's age
+            Console.Write("What's your age?  ");
+            int age = int.Parse(Console.ReadLine());
+            Thread.Sleep(2000);
+            string greeting2 = $"That's awesome, {name}. Nice to meet you.";
+            Console.WriteLine(greeting2);
+            Thread.Sleep(2000);
+
+            // Compare user's age with Kescha's age
+            Console.WriteLine("Do you want to compare your age with Kescha's age?");
+            string confirmation = Console.ReadLine().ToLower();
+            Thread.Sleep(2000);
+
+            if (confirmation == "yes")
+            {
+                Console.WriteLine("Wait......");
+                Thread.Sleep(2000);
+                int keschaAge = 5;
+                int ageDifference = age - keschaAge;
+                Console.WriteLine($"The result is: {ageDifference}");
+
+                if (age > keschaAge)
+                {
+                    Console.WriteLine("You are older than Kescha.");
+                }
+                else if (age == keschaAge)
+                {
+                    Console.WriteLine("You are the same age as Kescha.");
+                }
+                else
+                {
+                    Console.WriteLine("You are younger than Kescha.");
+                }
+                Thread.Sleep(2000);
+    
+                // Display Kescha's friends' details
+                Console.WriteLine("Now let me tell you about my friends.");
+                Thread.Sleep(2000);
+
+                string[] friendsName = {"Luna", "Iris", "Aurora"};
+                int[] friendsAge = {4, 6, 5};
+                string[] friendsAddress = {"Sydney", "Arizona", "Bangkok"};
+
+                for (int i = 0; i < friendsName.Length; i++)
+                {
+                    Console.WriteLine($"One of my friends is {friendsName[i]}. He is from {friendsAddress[i]} and he is {friendsAge[i]} years old");
+                }
+            }
+            else if (confirmation == "no")
+            {
+                Console.WriteLine("Okay, no problem");
+            }
+            else
+            {
+                Console.WriteLine("Wrong confirmation entered!");
+            }
+        }
+    }
 }
