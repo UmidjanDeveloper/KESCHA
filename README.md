@@ -1,6 +1,6 @@
 # Kescha App
 
-Kescha is a console application that calculate you age between Kescha's age and  introduces you some friends of the author. The app is implemented in C# and uses object-oriented programming principles.
+This is a console application that allows the user to calculate their age and compare it to Kescha's age, who is a fictional character. The user is also prompted to enter their name and answer a confirmation question and  introduced to Kescha's friends.The app is implemented in C# and uses object-oriented programming principles.
 
 ## Installation
 
