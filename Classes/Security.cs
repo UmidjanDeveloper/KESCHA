@@ -7,9 +7,10 @@ namespace KESCHA.Classes
         public void CheckPassword()
         {
             string password = "";
+            Console.WriteLine("Hello, I'm Kescha! To continue the process please enter password:"); 
+
             do
             {   
-                Console.WriteLine("Hello, I'm Kescha! To continue the process please enter password:");
                 password = Console.ReadLine();
                 if(password != "Umid@123")
                 {
