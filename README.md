@@ -24,7 +24,3 @@ If you deny, the app will terminate without further action.
 ## Contributing
 
 If you want to contribute to the Kescha app, you can do so by forking the repository, making changes, and submitting a pull request. Please make sure that your changes follow the coding style and conventions of the project.
-
-## License
-
-The Kescha app is licensed under the MIT License. See the `LICENSE` file for details.
