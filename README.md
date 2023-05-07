@@ -1,24 +1,26 @@
-# Kescha Age Calculator
+# Kescha App
 
-This is a console application that allows the user to calculate their age and compare it to Kescha's age, who is a fictional character. The user is also prompted to enter their name and answer a confirmation question, and is introduced to Kescha's friends.
+This is a console application that allows the user to calculate their age and compare it to Kescha's age, who is a fictional character. The user is also prompted to enter their name and answer a confirmation question and  introduced to Kescha's friends.The app is implemented in C# and uses object-oriented programming principles.
 
-## Getting Started
+## Installation
 
-To run the application, simply download the code and open it in a C# integrated development environment (IDE) such as Visual Studio. Then, compile and run the code.
+To run the Kescha app, you need to have .NET Core 3.1 or later installed on your machine. You can download .NET Core from the official website: https://dotnet.microsoft.com/download.
+
+To install the app, follow these steps:
+
+1. Clone the repository to your local machine: `git clone https://github.com/your-username/kescha.git`
+2. Open a command prompt or terminal window and navigate to the directory where you cloned the repository: `cd kescha`
+3. Build the app: `dotnet build`
+4. Run the app: `dotnet run`
 
 ## Usage
 
-Upon running the application, the user will be prompted to enter their name and age. They will also be asked if they want to compare their age to Kescha's age. If they answer yes, the application will calculate the age difference and determine whether the user is older, younger, or the same age as Kescha. The user will also be introduced to Kescha's friends.
+When you run the Kescha app, it will prompt you whether you want to hear about the author's friends. Type "yes" or "no" to confirm or deny.
 
-## Security
+If you confirm, the app will introduce you to four friends with their names, ages, and addresses. The app will also include your name and age in the list of friends.
 
-This application contains a security feature that requires the user to enter a password to continue. The password is hardcoded into the code and can be changed if necessary.
+If you deny, the app will terminate without further action.
 
 ## Contributing
 
-Contributions to the project are welcome. If you find any bugs or want to suggest a new feature, please open an issue on GitHub.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
- 
+If you want to contribute to the Kescha app, you can do so by forking the repository, making changes, and submitting a pull request. Please make sure that your changes follow the coding style and conventions of the project.
